@@ -1,0 +1,36 @@
+# ----- FUNCTIONS 
+
+#souce code : https://rstudio-pubs-static.s3.amazonaws.com/79860_0c7cc6aba72f4bb1b50a08f54bcda219.html
+
+tagPOS <-  function(x, ...) {
+  s <- as.String(x)
+  word_token_annotator <- Maxent_Word_Token_Annotator()
+  a2 <- Annotation(1L, "sentence", 1L, nchar(s))
+  a2 <- annotate(s, word_token_annotator, a2)
+  a3 <- annotate(s, Maxent_POS_Tag_Annotator(), a2)
+  a3w <- a3[a3$type == "word"]
+  POStags <- unlist(lapply(a3w$features, `[[`, "POS"))
+  POStagged <- paste(sprintf("%s/%s", s[a3w], POStags), collapse = " ")
+  list(POStagged = POStagged, POStags = POStags)
+}
+
+# ###### illustrate usage of tagPOS
+# str <- "this is a the first sentence."
+# tagged_str <-  tagPOS(str)
+# tagged_str
+
+
+SplitText <- function(Phrase) { 
+  unlist(strsplit(Phrase," "))
+}
+trim <- function (x) gsub("^\\s+|\\s+$", "", x)
+SelectTaggedWords <- function(Words,tagID) {
+  Words[ grep(tagID,Words) ]
+}
+
+RemoveTags <- function(Words) {
+  sub("/[A-Z]{2,3}","",Words)
+}
+
+
+
