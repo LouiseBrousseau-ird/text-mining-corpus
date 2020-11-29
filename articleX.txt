@@ -1,0 +1,16 @@
+## Article formatting for automated text-mining (kewords and keyexpressions extraction). 
+## Encoding : ANSI - latin 1
+\\YEAR
+# publication year
+\\TITLE
+# article title (single line)
+\\ABSTRACT
+# abstract (single line)
+\\KEYWORDS
+# article keywords (single line, coma-separated, "NA" if no keywords)
+\\TEXT
+# text (mutli-lines), 
+# Must include :
+# introduction + M&M + Results + DIscussion + Conclusion
+# Must exclude :
+# figures + bibliography + aknowledgements + supporting information etc.
