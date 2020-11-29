@@ -7,7 +7,7 @@ dir="" #path to working diectory
 corpus_dir="./corpus author" # path to author directory containing author's articles (within working dir)
 list.files(path = corpus_dir)
 
-file_number=3 # Manual selection of files to process
+file_number=3 # Manual selection of file to process
 
 # parameters
 occurence_threshold=5 # number of occurence of a word in the text
