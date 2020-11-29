@@ -1,5 +1,5 @@
 # text-mining-corpus
-Text-mining procedure for automated keywords and common expression extraction from a corpus of articles (one or several authors)
+Text-mining procedure for automated keywords and common expressions extraction from a corpus of articles (one or several authors)
 --------------------------------------------------------------------------------------------------------------------------------
 version 0 : nov 2020
 
